@@ -1,0 +1,44 @@
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: tomato;
+
+    width: 300px;
+    z-index: 1;
+
+}
+
+.popup2 {
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: tomato;
+
+    width: 300px;
+}
+
+.popup3 {
+    position: fixed;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    background: tomato;
+
+    width: 300px;
+}
+
+img {
+    position: relative;
+    width: 300px;
+    vertical-align: middle;
+}
+
+.btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}

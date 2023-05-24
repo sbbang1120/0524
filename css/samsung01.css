@@ -1,0 +1,372 @@
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+#header.on {
+    background: #fff;
+}
+
+#header .inner {
+    transition: 0.5s;
+}
+
+#header.on .inner {
+    height: 60px;
+}
+
+#header .gnb>ul>li {
+    margin: 0 80px 0 0;
+    position: relative;
+}
+
+#header .gnb>ul>li>a {
+    outline: 1px solid tomato;
+    display: block;
+    line-height: 100px;
+}
+
+#header .gnb>ul>li .sub {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100px;
+    border: 1st solid #ddd;
+    background: #fff;
+    text-align: center;
+    line-height: 40px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+#header .gnb>ul>li:hover .sub {
+    top: 90px;
+    opacity: 1;
+    visibility: visible;
+}
+
+#header .gnb>ul>li .sub::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+#header .gnb>ul>li .sub li {
+    position: relative;
+    background: #fff;
+}
+
+#header .gnb>ul>li .sub li a {
+    display: block;
+}
+
+#header .gnb>ul>li .sub li~li {
+    border-top: 1px solid #ddd;
+}
+
+.itm {
+    height: 600px;
+}
+
+.itm01 {
+    background: url(../images/sm02.jpg) no-repeat center center/cover;
+}
+
+.itm02 {
+    background: url(../images/sm03.jpg) no-repeat center center/cover;
+}
+
+.itm03 {
+    background: url(../images/sm04.jpg) no-repeat center center/cover;
+}
+
+.mainVisual .arrows {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* 위에 none + 이거. 슬라이드에 화살표 갖다대면 나타나기 */
+.mainVisual:hover .arrows {
+    display: block;
+}
+
+.mainVisual .arrows i {
+    font-size: 30px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.mainVisual .arrows .left {
+    position: absolute;
+    top: 0;
+}
+
+.mainVisual .arrows .right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mainVisual .slick-dots {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.mainVisual .slick-dots>* {
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.mainVisual .slick-dots li button {
+    background: #ddd;
+    color: #fff;
+    padding: 3px;
+    font-size: 0px;
+    width: 50px;
+    height: 5px;
+    border: none;
+    outline: none;
+}
+
+.mainVisual .slick-dots li.slick-active button {
+    background: #333;
+}
+
+.product {
+    margin: 0 auto;
+    top: 0;
+    position: relative;
+}
+
+.product .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1400px;
+    width: 100%;
+}
+
+.product .arrows i {
+    position: absolute;
+    top: 0;
+
+    font-size: 30px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.product .arrows .left {
+    left: 0;
+}
+
+.product .arrows .right {
+    right: 0;
+}
+
+.content {
+    overflow: hidden;
+}
+
+.product_slide {
+    margin: 0 -15px;
+}
+
+.product_slide figure {
+    padding: 0 15px;
+}
+
+.product_slide .slick-dots {
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+
+.product_slide .slick-dots li {
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.product_slide .slick-dots li button {
+    background: #ddd;
+    color: #fff;
+    padding: 3px;
+    font-size: 0px;
+    width: 50px;
+    height: 5px;
+    border: none;
+    outline: none;
+}
+
+.product_slide .slick-dots li.slick-active button {
+    background: #333;
+}
+
+.product_slide figure strong {
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    font-size: 30px;
+    border: 500;
+}
+
+.product_slide figure a {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 5px 12px;
+    margin: 0 20px 0 0;
+}
+
+.product_slide figure img {
+    transition: 0.5s;
+}
+
+.product_slide figure:hover img {
+    transform: scale(1.2);
+}
+
+.customer .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.customer .list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: #fff;
+    margin: 0 0 10px 0;
+    padding: 0 30px
+}
+
+.customer .list::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+
+    border-top: 1px solid #5691ff;
+    border-left: 1px solid #5691ff;
+    visibility: hidden;
+
+    transition: 0.5s;
+}
+
+.customer .list::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+
+    border-bottom: 1px solid #5691ff;
+    border-right: 1px solid #5691ff;
+    visibility: hidden;
+
+    transition: 0.5s;
+}
+
+.customer .list:hover::before {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+
+.customer .list:hover::after {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+.customer .list h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 0 10px 0;
+}
+
+.customer .nav {
+    display: flex;
+    max-width: 1200px;
+    padding: 0 15px 100px 0;
+    margin: 0 auto 50px auto;
+}
+
+.customer .nav>li {
+    flex: 1;
+}
+
+.customer .nav>li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 5px;
+    background: #5691ff;
+    margin: 0 auto;
+    transition: 0.5s;
+}
+
+.customer .nav>li:hover::after {
+    width: 100%;
+}
+
+.customer .nav>li p {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.customer .nav>li .xi-car {
+    padding: 0 15px;
+    font-size: 80px;
+}
+
+.customer .nav>li .xi-calendar-list {
+    font-size: 80px;
+}
+
+.customer .nav>li .xi-calendar-check {
+    font-size: 80px;
+}
+
+.customer .nav>li a {
+    /* 요소를 가운데 오게 하는 옛날 방식 */
+    display: block;
+    text-align: center;
+    line-height: 100px;
+    font-size: 25px;
+}
+
+.customer .nav>li~li {
+    border-left: 1px solid #ddd;
+}
